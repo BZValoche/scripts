@@ -1,5 +1,5 @@
 #  Nom du Script  Backup_File_to_GoogleDrive
-#  Cr�er le    22/01/2020
+#  Créer le    22/01/2020
 #  Auteur : Freijanes Christophe
 #  Version : 1.0
 #  Action du script : Sauvegarde de la Base MultiPutty dans Google Drive
@@ -27,7 +27,7 @@ RenameFile -location "D:\Google Drive\Documents_\Pro\xxx\xxx\MultiPutty\SAUVEGAR
 ####Extension#################################################################################################
 $FileExtension = [io.path]::GetExtension($SourceFilePath)
 
-####R�cup�ration du nom du fichier#############################################################################
+####Récupération du nom du fichier#############################################################################
 $FileName = [io.path]::GetFileNameWithoutExtension($SourceFilePath)
 
 ####Dossier source############################################################################################
@@ -36,15 +36,15 @@ $SourceFilePath = "D:\Google Drive\Documents_\Pro\xxx\xxx\MultiPutty\bdd.dat"
 ####Dossier Destination#######################################################################################
 $DestinationFile = "D:\Google Drive\Documents_\Pro\xxx\xxx\MultiPutty\SAUVEGARDE\"
 
-####ETAPES####################################################################################################
+####ETAPES###################################################################################################
 
-####Création du dossier \SAUVEGARDE\######################################################################### 
+####CrÃ©ation du dossier \SAUVEGARDE\######################################################################### 
 New-Item -Path 'D:\Google Drive\Documents_\Pro\xxx\xxx\MultiPutty\SAUVEGARDE\' -ItemType "directory" 
 
-####Création du dossier \SAUVEGARDE\log\#####################################################################
+####CrÃ©ation du dossier \SAUVEGARDE\log\#####################################################################
 #New-Item -Path 'D:\Google Drive\Documents_\Pro\xxx\xxx\MultiPutty\log\' -ItemType "directory" 
 
-####Copie du fichier � sauvegarder############################################################################
+####Copie du fichier à sauvegarder############################################################################
 Copy-Item $SourceFilePath $DestinationFile
 
 ####Supprimer les fichiers plus anciens que 3 jours###########################################################
