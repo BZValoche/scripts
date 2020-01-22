@@ -77,7 +77,6 @@ $j = 0
  
 
       }
-
 # On supprime le fichier temporaire
  remove-item $CheminLogTemp\ProfilASuppr_$Serveur.txt
 
