@@ -2,9 +2,11 @@
 color 2
 echo Scan du regedit
 sfc /scannow
+pause
 color 3
 echo Scan de la sante de votre dossier WinSxS
 DISM /Online /Cleanup-image /Scanhealth
+pause
 color 4
 echo Analyse du store
 DISM /Online /Cleanup-Image /AnalyzeComponentStore
