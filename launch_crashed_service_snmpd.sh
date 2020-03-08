@@ -1,8 +1,8 @@
 #!/bin/bash
 
-service snmpd status | grep 'active (running)' > /dev/null 2>&1
+service snmpd status | grep -q 'active (running)'
 
-if [ $? != 0 ]
+if [ $? -ne 0 ]
 then
         sudo service snmpd restart > /dev/null
 fi
